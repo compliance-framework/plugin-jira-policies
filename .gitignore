@@ -1,0 +1,6 @@
+.idea/
+data/
+dist/
+*.tar.gz
+
+testdata/
