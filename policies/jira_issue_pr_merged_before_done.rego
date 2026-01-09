@@ -6,7 +6,7 @@ import future.keywords.in
 title := "Pull requests must be merged before issue completion"
 description := "Change request issues with linked PRs must have at least one PR merged before the issue can be considered complete."
 
-done_statuses := ["done", "closed", "resolved", "complete", "completed"]
+done_statuses := ["done", "closed", "resolved", "complete", "completed", "finished"]
 
 violation[{"remarks": remarks}] if {
 	project := input.projects[_]
