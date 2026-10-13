@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  pull_request:
+    # closed: notify marks the PR's needs-human card handled and closes its CI incident.
+    types: [opened, edited, synchronize, reopened, labeled, unlabeled, closed]
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  ci:
+    uses: compliance-framework/workflows/.github/workflows/ci-policies.yml@6e7fc9c04b59c7d1117938da397f8a6f8df036ab # v1.5.2
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: read
+      security-events: write
+    secrets: inherit
+
+  release-checks:
+    uses: compliance-framework/workflows/.github/workflows/release-checks.yml@6e7fc9c04b59c7d1117938da397f8a6f8df036ab # v1.5.2
+    permissions:
+      contents: read
+
+  notify:
+    needs: [ci, release-checks]
+    if: always()
+    uses: compliance-framework/workflows/.github/workflows/notify-failure.yml@6e7fc9c04b59c7d1117938da397f8a6f8df036ab # v1.5.2
+    with:
+      needs: ${{ toJSON(needs) }}
+    permissions:
+      contents: read
+    secrets: inherit

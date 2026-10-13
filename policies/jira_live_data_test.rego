@@ -39,13 +39,11 @@ live_data := {"projects": [{
 		},
 		"fields_with_metadata": [],
 		"changelog": {
-			"histories": [
-				{
-					"author": {"displayName": "Someone Else"},
-					"created": "2026-01-07T14:29:44+01:00",
-					"items": [{"field": "CAB Approvers", "fromString": "", "toString": "[My Friend]"}],
-				},
-			],
+			"histories": [{
+				"author": {"displayName": "Someone Else"},
+				"created": "2026-01-07T14:29:44+01:00",
+				"items": [{"field": "CAB Approvers", "fromString": "", "toString": "[My Friend]"}],
+			}],
 			"startAt": 0,
 			"maxResults": 3,
 			"total": 3,

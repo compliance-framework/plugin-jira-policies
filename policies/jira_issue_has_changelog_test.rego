@@ -20,15 +20,18 @@ test_pass_when_change_request_has_changelog if {
 	inp := {"projects": [{"project": {"id": "1", "key": "TEST", "name": "Test"}, "issues": [{
 		"key": "CR-123",
 		"fields": {"issuetype": {"name": "Change Request"}},
-		"changelog": {"histories": [{
-			"author": {"displayName": "user1"},
-			"created": "2024-01-01T10:00:00Z",
-			"items": [{
-				"field": "status",
-				"fromString": "Open",
-				"toString": "In Progress",
+		"changelog": {
+			"histories": [{
+				"author": {"displayName": "user1"},
+				"created": "2024-01-01T10:00:00Z",
+				"items": [{
+					"field": "status",
+					"fromString": "Open",
+					"toString": "In Progress",
+				}],
 			}],
-		}], "startAt": 0, "maxResults": 1, "total": 1},
+			"startAt": 0, "maxResults": 1, "total": 1,
+		},
 		"approvals": [],
 		"slas": [],
 		"deployments": [],

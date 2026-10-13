@@ -13,9 +13,7 @@ test_violation_when_no_issue_types if {
 }
 
 test_violation_when_issue_types_missing if {
-	inp := {"projects": [{
-		"project": {"id": "10001", "key": "PROJ", "name": "Test Project"},
-	}]}
+	inp := {"projects": [{"project": {"id": "10001", "key": "PROJ", "name": "Test Project"}}]}
 
 	violations := policy.violation with input as inp
 	count(violations) == 1

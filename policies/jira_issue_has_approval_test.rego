@@ -45,7 +45,7 @@ test_violation_when_change_request_has_pending_approval if {
 test_pass_when_change_request_has_approved_approval if {
 	inp := {"projects": [{"project": {"id": "1", "key": "TEST", "name": "Test"}, "issues": [{
 		"key": "CR-123",
-		"fields": {"issuetype": {"name":  "Request a change"}},
+		"fields": {"issuetype": {"name": "Request a change"}},
 		"changelog": null,
 		"approvals": [{
 			"id": "1",
