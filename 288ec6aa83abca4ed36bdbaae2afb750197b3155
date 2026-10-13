@@ -1,0 +1,2 @@
+lisa-design:
+W3-S2-T02: callers, release-please-config.json and manifest are byte-identical to the reviewed batch-1 reference (plugin-file-attestation-policies#4): mock-plugin-policies-1 callers with pins moved to v1.5.2. Seed 0.2.0 = releases/latest v0.2.0 (final, commit 5ec0158 is an ancestor of main). ci.yml was already on v1.5.2 with release-checks, so it is unchanged. README describes only `make build`, not releasing, so it is unchanged.
