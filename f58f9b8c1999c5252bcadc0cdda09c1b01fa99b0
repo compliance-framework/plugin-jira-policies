@@ -4,3 +4,7 @@ lisa-design:
 - Only CI error was opa fmt (16 files); opa check --strict, opa test and Regal (shared config) had no errors, so the style commit is pure opa fmt 1.14.1 output.
 - No data.json/data.yaml under policies/, so ci-policies' except-paths generation adds nothing; no Regal ignores needed.
 - Regal warnings (45) intentionally left unfixed per the user's errors-only decision.
+
+lisa-selfreview:
+- Pass 1 (ccf-review packs core, rego-policy): no findings on the diff. Style commit is pure opa fmt 1.14.1 output (behaviour identical on 8 inputs, main vs branch); ci.yml is the mock caller with only the pin changed (SHA-pinned, permissions: {}).
+- Pre-existing, out of scope (listed in PR body, not fixed): no # METADATA blocks; risk_templates lack violation_ids; README lists four policies removed in #2; Makefile test target runs `OPA` (uppercase); 45 Regal warnings.
