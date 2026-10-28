@@ -11,7 +11,7 @@ jobs:
   release:
     uses: compliance-framework/workflows/.github/workflows/release-policies.yml@05d2c3233de6e302c4ff891dde1132d440c081e4 # v1.6.0
     with:
-      opa-version: "1.14.1"
+      opa-version: "1.21.3"
       directory: policies
     permissions:
       contents: read
